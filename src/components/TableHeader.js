@@ -2,6 +2,7 @@ import React from "react";
 
 function TableHeader (props) {
     return(
+<div className="table-responsive">
 <table className="table table-striped">
   <thead>
     <tr>
@@ -19,6 +20,7 @@ function TableHeader (props) {
   {props.children}
 
 </table>
+</div>
     );
 }
 

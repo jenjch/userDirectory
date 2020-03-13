@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Header from "./Header";
+import Container from "./Container";
 import SearchBox from "./SearchBox";
 import TableHeader from "./TableHeader";
 import TableBody from "./TableBody";
@@ -35,6 +36,9 @@ class Page extends Component {
     // set filtered result
     const filtered = this.state.result.filter(person => {
       // return person.name.first===search
+
+      // need to make sure the search match accounts for capitalization
+      
       return person.name.first.indexOf(search)> -1;
     //   words.filter(word => word.indexOf("es")> -1 );
 })
@@ -109,32 +113,9 @@ class Page extends Component {
     }) 
   };
 
-
-  //   var results = data.sort( (a,b) => {
-  //     var nameA = a.name.first.toUpperCase();
-  //     var nameB = b.name.first.toUpperCase();
-  //     if (nameA < nameB) {
-  //       return -1;
-  //    }
-  //     if (nameA > nameB) {
-  //       return 1;
-  //    }
-  // // this is for if the above two conditions are not met
-  //     if (a.name.last < b.name.last) {
-  //        return -1;
-  //     }
-  //     if (a.name.last > b.name.last) {
-  //        return 1;
-  //     }
-  //   // names must be equal
-  //     return 0;
-  
-  // } )
-  // }
-
   render() {
     return (
-      <div>
+        <Container>
         <Header />
         <SearchBox
           // value={this.state.display}
@@ -155,7 +136,7 @@ class Page extends Component {
             ))
           }
         </TableHeader>
-      </div>
+        </Container>
     );
   }
 }

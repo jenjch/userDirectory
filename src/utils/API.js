@@ -3,7 +3,7 @@ import axios from "axios";
 
 export default {
   display: function() {
-    return axios.get("https://randomuser.me/api/?page=3&results=100&seed=abc&nat=us");
+    return axios.get("https://randomuser.me/api/?page=10&results=100&seed=abc&nat=us");
   }
 
 };

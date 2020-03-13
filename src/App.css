@@ -36,3 +36,17 @@
     transform: rotate(360deg);
   }
 }
+
+/* .firstName:hover {
+
+} */
+nav {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: teal;
+  color: whitesmoke;
+}
+.form-group {
+  width: 25%;
+  justify-content: center;
+}

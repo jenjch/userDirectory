@@ -1,8 +1,10 @@
 import React from "react";
 
 function SearchBox(props) {
-    return (
-      <form>
+  return (
+    <div>
+        <br/>
+      <form className="form-inline justify-content-center">
         <div className="form-group">
           {/* <label htmlFor="search">Search:</label> */}
           <input
@@ -11,13 +13,14 @@ function SearchBox(props) {
             name="search"
             type="text"
             className="form-control"
-            placeholder="Search For an Employee Name"
+            placeholder="Search For an Employee"
             id="search"
           />
         </div>
       </form>
-    );
-  }
-  
-  export default SearchBox;
-  
+      <br />
+    </div>
+  );
+}
+
+export default SearchBox;
