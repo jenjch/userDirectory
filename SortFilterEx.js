@@ -281,7 +281,7 @@ var data = [
    }
 ]
 
-
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
 var results = data.sort( (a,b) => {
     var nameA = a.name.first.toUpperCase();
     var nameB = b.name.first.toUpperCase();
@@ -303,6 +303,7 @@ var results = data.sort( (a,b) => {
 
 } )
 
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
 var filtered = data.filter(person => {
       return person.name.first==="Devon"
     //   return person.name.first.indexOf("placeholder")> -1 );

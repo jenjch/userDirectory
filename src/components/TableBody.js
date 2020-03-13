@@ -4,6 +4,7 @@ function TableBody(props) {
   return (
     <tbody>
       <tr>
+      {/* {parseInt(props.key)} */}
         <th scope="row">{props.key}</th>
         <td>
           <img src={props.image} height="50" />

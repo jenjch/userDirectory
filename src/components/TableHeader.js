@@ -7,8 +7,9 @@ function TableHeader (props) {
     <tr>
       <th scope="col">#</th>
       <th scope="col">Image</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
+      <th onClick={props.sortFirst} scope="col">First Name</th>
+      {/* onClick={props.sortFirst} */}
+      <th onClick={props.sortLast} scope="col">Last Name</th>
       <th scope="col">Phone</th>
       <th scope="col">Email</th>
       <th scope="col">Age</th>

@@ -53,6 +53,85 @@ class Page extends Component {
   //   });
   // };
 
+  sortFirst = () => {
+    let sortedFirst = this.state.result.sort((a,b) =>
+    {
+      var nameA = a.name.first.toUpperCase();
+      var nameB = b.name.first.toUpperCase();
+      if (nameA < nameB) {
+        return -1;
+     }
+      if (nameA > nameB) {
+        return 1;
+     }
+  // this is for if the above two conditions are not met
+      if (a.name.last < b.name.last) {
+         return -1;
+      }
+      if (a.name.last > b.name.last) {
+         return 1;
+      }
+    // names must be equal
+      return 0;
+    })
+
+    this.setState({
+
+      filteredResult: sortedFirst
+    }) 
+  };
+
+  sortLast = () => {
+    let sortedLast = this.state.result.sort((a,b) =>
+    {
+      var nameA = a.name.last.toUpperCase();
+      var nameB = b.name.last.toUpperCase();
+      if (nameA < nameB) {
+        return -1;
+     }
+      if (nameA > nameB) {
+        return 1;
+     }
+  // this is for if the above two conditions are not met
+      if (a.name.last < b.name.last) {
+         return -1;
+      }
+      if (a.name.last > b.name.last) {
+         return 1;
+      }
+    // names must be equal
+      return 0;
+    })
+
+    this.setState({
+
+      filteredResult: sortedLast
+    }) 
+  };
+
+
+  //   var results = data.sort( (a,b) => {
+  //     var nameA = a.name.first.toUpperCase();
+  //     var nameB = b.name.first.toUpperCase();
+  //     if (nameA < nameB) {
+  //       return -1;
+  //    }
+  //     if (nameA > nameB) {
+  //       return 1;
+  //    }
+  // // this is for if the above two conditions are not met
+  //     if (a.name.last < b.name.last) {
+  //        return -1;
+  //     }
+  //     if (a.name.last > b.name.last) {
+  //        return 1;
+  //     }
+  //   // names must be equal
+  //     return 0;
+  
+  // } )
+  // }
+
   render() {
     return (
       <div>
@@ -61,11 +140,11 @@ class Page extends Component {
           // value={this.state.display}
           handleInputChange={this.handleInputChange}
         />
-        <TableHeader>
+        <TableHeader sortFirst={this.sortFirst} sortLast={this.sortLast}>
             {
             this.state.filteredResult.map((person, index) => (
               <TableBody
-            key={index}
+            key={index.toString()}
             image={person.picture.medium}
             first={person.name.first}
             last={person.name.last}
