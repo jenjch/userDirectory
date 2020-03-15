@@ -5,7 +5,6 @@ import SearchBox from "./SearchBox";
 import TableHeader from "./TableHeader";
 import TableBody from "./TableBody";
 import API from "../utils/API";
-import "./page.css";
 
 class Page extends Component {
   // set State
