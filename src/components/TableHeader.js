@@ -7,15 +7,15 @@ function TableHeader(props) {
       <table className="table table-striped">
         <thead>
           <tr>
-            <th scope="col" onClick={props.restoreOrder}>
+            <th scope="col" onClick={props.restoreOrder} className="index">
               #
             </th>
             <th scope="col">Image</th>
-            <th scope="col" onClick={props.sortFirst}>
+            <th scope="col" onClick={props.sortFirst} className="firstName">
               First Name
             </th>
             {/* onClick={props.sortFirst} */}
-            <th scope="col" onClick={props.sortLast}>
+            <th scope="col" onClick={props.sortLast} className="lastName">
               Last Name
             </th>
             <th scope="col">Phone</th>
@@ -23,9 +23,11 @@ function TableHeader(props) {
             <th scope="col">Age</th>
           </tr>
         </thead>
+        <tbody>
 
         {props.children}
         
+        </tbody>
       </table>
     </div>
   );
